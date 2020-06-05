@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {shade} from 'polished'
-import SignBackground from '../../assets/sign-in-background.png';
+import SignBackground from '../../assets/1587470786293-attachment.png';
+
 export const Container = styled.div`
 
   height: 100vh;
@@ -16,11 +17,11 @@ export const Content = styled.div`
   align-items: center;
   place-content: center;
 
-  width: 100vh;
+  width: 100%;
   max-width: 700px;
 
   form {
-    margin: 60px 0;
+    margin: 45px 0 15px;
     width: 340px;
     text-align: center;
 
@@ -42,7 +43,7 @@ export const Content = styled.div`
   }
 
   > a {
-    color: #ff9000;
+    color: #F4EDE8;
     display: block;
     margin-top: 10px;
     text-decoration: none;
@@ -52,7 +53,7 @@ export const Content = styled.div`
     align-items: center;
 
     &:hover {
-        color: ${shade(0.2, '#ff9000')}
+        color: ${shade(0.2, '#F4EDE8')}
       }
     svg {
       margin-right: 10px;
