@@ -63,17 +63,17 @@ export const Error = styled(Tooltip)`
   height: 20px;
   margin-left: 16px;
 
+  svg {
+    margin: 0;
+  }
+
   span {
-    background: #c53030 !important;
+    background: #c53030;
     color: #FFF;
 
     &::before {
-      border-color: #c53030 transparent !important;
+      border-color: #c53030 transparent;
     }
-  }
-
-  svg {
-    margin: 0;
   }
 
 `;
