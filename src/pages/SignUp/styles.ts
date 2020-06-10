@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import {shade} from 'polished'
 import SignBackground from '../../assets/1587470786293-attachment.png';
 
@@ -17,11 +17,32 @@ export const Content = styled.div`
   align-items: center;
   place-content: center;
 
-  width: 100%;
+  width: 100vh;
   max-width: 700px;
 
-  form {
-    margin: 45px 0 15px;
+
+`;
+
+const apperFromRight = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
+export const AnimationContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  animation: ${apperFromRight} 1.3s;
+
+   form {
+    margin: 60px 0;
     width: 340px;
     text-align: center;
 
@@ -43,7 +64,7 @@ export const Content = styled.div`
   }
 
   > a {
-    color: #F4EDE8;
+    color: #ff9000;
     display: block;
     margin-top: 10px;
     text-decoration: none;
@@ -53,14 +74,14 @@ export const Content = styled.div`
     align-items: center;
 
     &:hover {
-        color: ${shade(0.2, '#F4EDE8')}
+        color: ${shade(0.2, '#ff9000')}
       }
     svg {
       margin-right: 10px;
     }
   }
-`;
 
+`;
 
 export const Background = styled.div`
   flex: 1;
