@@ -7,6 +7,7 @@ import { FiPower, FiClock } from 'react-icons/fi';
 import DayPicker, { DayModifiers } from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 
+import { Link } from 'react-router-dom';
 import {
   Container,
   Header,
@@ -145,13 +146,20 @@ const Dashboard: React.FC = () => {
           <img src={logoImg} alt="" srcSet="" />
 
           <Profile>
-            {user.avatar_url != null && (
-              <img src={user.avatar_url} alt={user.name} />
-            )}
+            <img
+              src={
+                user.avatar_url !== null
+                  ? user.avatar_url
+                  : 'https://api.adorable.io/avatars/118/abott@adorable.png'
+              }
+              alt={user.name}
+            />
 
             <div>
               <span>Bem-vindo</span>
-              <strong>{user.name}</strong>
+              <Link to="/profile">
+                <strong>{user.name}</strong>
+              </Link>
             </div>
           </Profile>
 
